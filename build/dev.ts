@@ -1,10 +1,8 @@
 import * as esbuild from "esbuild";
+import SHARED_ESBUILD_CONFIG from "./shared";
 
 const ctx = await esbuild.context({
-  entryPoints: ["src/main.ts"],
-  minifySyntax: true,
-  bundle: true,
-  outdir: "dist",
+  ...SHARED_ESBUILD_CONFIG,
 });
 
 ctx.watch();
