@@ -16,6 +16,7 @@ export class Player extends Actor {
   turningRight = false;
   firing = false;
   fireDelayProgress = 100000000000000;
+  zIndex = 10;
 
   readonly rotationSpeed = 3;
   readonly accleration = 10;
@@ -124,6 +125,7 @@ export class Player extends Actor {
           },
         },
       );
+      particle.zIndex = 0;
       this.scene.addActor(particle);
     }
 
@@ -164,6 +166,7 @@ export class Player extends Actor {
           },
         },
       );
+      particle.zIndex = 0;
       this.scene.addActor(particle);
     });
 

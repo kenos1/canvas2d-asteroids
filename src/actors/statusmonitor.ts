@@ -7,6 +7,7 @@ export class StatusMonitor extends Actor {
   fps: number;
   delayProgress: number = 1000000000000000;
   readonly delay = 1;
+  zIndex = 99999;
 
   constructor(scene: Scene) {
     super("StatusMonitor", scene, { lines: [] }, V.create(20, 20));

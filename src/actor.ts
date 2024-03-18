@@ -11,6 +11,7 @@ export default class Actor {
   sprite: Sprite;
   rotation: number = 0;
   scale: number = 1;
+  zIndex: number = 0;
 
   constructor(type: string, scene: Scene, sprite: Sprite, location: Vector) {
     this.type = type;

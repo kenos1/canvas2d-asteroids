@@ -33,6 +33,8 @@ export class Scene {
   }
 
   render() {
+    this.objects.sort((a, b) => a.zIndex - b.zIndex);
+
     const ctx = this.ctx;
 
     ctx.fillStyle = this.background;
